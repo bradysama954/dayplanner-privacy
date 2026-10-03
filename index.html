@@ -23,39 +23,42 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: September 20, 2026</p>
+    <p class="last-updated">Last updated: October 2, 2026</p>
 
     <p>DayPlanner ("the App") is developed by Sean Brady. This Privacy Policy explains how the App handles your information.</p>
 
     <h2>Our Commitment to Privacy</h2>
-    <p>DayPlanner is designed with privacy as a core principle. DayPlanner has no server of its own. Your plans and conversations are stored on your device, and the AI runs on your device. We do not collect data for our own purposes, and we do not share your information with advertisers, data brokers, or analytics providers. The App does send your precise location to Apple Maps to power nearby search, and processes your calendar on-device when you ask about it — see below for exactly how.</p>
+    <p>DayPlanner is designed with privacy as a core principle. DayPlanner has no server of its own. Your plans and conversations are stored on your device, and the AI runs on your device. We do not collect data for our own purposes, and we do not share your information with advertisers, data brokers, or analytics providers. If you allow Location access, the App sends your location to Apple Maps to find nearby places and, if you use the assistant, to look up the name of your neighborhood and city (or just your city), which it gives to the assistant on your device. If you allow Calendar access, the App also reads your calendar on your device — to show your events in the Calendar tab and when the assistant checks your plans for conflicts — and adds plans to your calendar only when you ask it to. Both are described below.</p>
 
     <h2>Data Stored on Your Device</h2>
     <p>The App stores the following data locally on your device to provide its functionality:</p>
     <ul>
         <li><strong>Itineraries</strong> — Day plans you create, including place names, addresses, times, and notes. Stored using Apple's SwiftData framework on your device.</li>
-        <li><strong>Conversation History</strong> — Your chat history with the AI assistant is saved locally so it persists between sessions. You can clear it at any time.</li>
+        <li><strong>Conversation History</strong> — Your messages and the assistant's replies are saved on your device so the conversation continues between sessions. The saved conversation also includes information the assistant used to answer, such as results of place searches (names and street addresses), calendar details the assistant looked up, and, starting with version 1.1.1, the note described under Location and the AI Assistant. Some of this is not shown in the chat. You can delete it at any time with Delete Conversation History in Settings.</li>
     </ul>
-    <p>Your itineraries and conversations are stored on your device. DayPlanner has no server and never sends this data anywhere on its own — the only way any of it can leave your device is through Apple's iCloud Backup, if you have that turned on, which includes it in your own iCloud backup under your own Apple Account, the same way it backs up your other apps. This data remains under your control, and deleting the App removes all stored data.</p>
+    <p>Your itineraries and conversations are stored on your device. DayPlanner has no server and does not send them to one. They can leave your device only in these ways: they are included in your device backups (iCloud Backup, a computer backup, or Time Machine on a Mac) if you use them; itinerary stops you add to your calendar are saved in that calendar and sync wherever your calendar account syncs; an itinerary you share with Share Itinerary goes wherever you send it; and place searches and location lookups are sent to Apple Maps as described under Location. Deleting the App removes this data from your device. It does not remove copies in existing backups or events already added to your calendar.</p>
 
     <h2>Device Permissions</h2>
     <p>The App may request access to the following device capabilities:</p>
     <ul>
-        <li><strong>Precise Location</strong> — Used to find places near you when searching for restaurants, parks, and other points of interest. Your precise location is sent to Apple Maps to perform the search and is subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Your location is not retained by DayPlanner and is never sent to any DayPlanner server — DayPlanner does not have one.</li>
+        <li><strong>Location</strong> — Optional. If you allow it, DayPlanner sends your location to Apple Maps to show the map and find places near you (in Explore, or when the assistant searches near you because you asked for places nearby or haven't named another place) and, if you use the assistant, to look up the name of your neighborhood and city (your city only, if you have turned off Precise Location). Location sent to Apple is subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. DayPlanner never sends your location to a DayPlanner server — it does not have one — and does not save your coordinates.</li>
         <li><strong>Calendar</strong> — Used to view your existing events for conflict checking and to export itinerary stops as calendar events. Calendar data is read on your device. See "Calendar Data and AI Processing" below for how it is used and retained.</li>
     </ul>
-    <p>Both permissions are optional. The App will ask before accessing these features, and you can revoke access at any time in Settings.</p>
+    <p>Both permissions are optional. The App will ask before accessing these features, and you can revoke access at any time in Settings. Turning off a permission stops new access but does not delete information already saved in your conversation history. Start a new conversation, or use Delete Conversation History in Settings, to delete it.</p>
+
+    <h2>Location and the AI Assistant</h2>
+    <p>Starting with version 1.1.1, each message you send to the assistant begins with a short note added by the App and not shown in the chat. It gives the current date and time, and the name, place and date of the plan the assistant is working on, if there is one. If you allow Location access, it also gives the neighborhood and city you are in (or just the city) when the App can find them; if you don't, it says your location isn't shared, and the assistant asks you where to plan when it needs a place you haven't named. Because this note is part of the conversation, your saved conversation can keep a record of where you were each time you sent a message, until you start a new conversation (the ↺ button in Chat, or Delete Conversation History in Settings) or delete the App. If the assistant creates a plan for where you are, that plan's location is your neighborhood and city (or just your city), and it stays with the plan until you delete the plan. If you have never sent a message to the assistant, no location information is saved.</p>
 
     <h2>Calendar Data and AI Processing</h2>
-    <p>When you ask the AI assistant about scheduling conflicts, DayPlanner reads the titles and times of your existing calendar events and includes them in the on-device request it passes to Apple Intelligence, so the assistant can check your itinerary against your calendar. This uses on-device models only; no external server is involved in this step. Because the assistant's replies are saved as part of your conversation history, calendar event titles and times you asked about may be retained in the saved conversation transcript on your device, in the same way as the rest of your chat history described above.</p>
+    <p>If you have already allowed Calendar access, the assistant may check your plans against your calendar for conflicts, on its own or when you ask. When it does, DayPlanner reads the titles and times of your existing calendar events for that day and includes them in the on-device request it passes to Apple Intelligence, so the assistant can check your itinerary against your calendar. If you have not allowed Calendar access, the assistant cannot read your calendar and does not ask for access to check for conflicts. The assistant adds plans to your calendar only when you ask it to. This uses on-device models only; no external server is involved in this step. Because the conversation, including the calendar details the assistant looked up, is saved as part of your conversation history, calendar event titles and times the assistant looked up may be retained in the saved conversation transcript on your device, in the same way as the rest of your chat history described above.</p>
 
     <h2>AI Processing</h2>
-    <p>The App uses Apple Intelligence (Apple's FoundationModels framework) to power the AI assistant. All AI processing occurs on your device. Your conversations are not sent to external servers for processing, and are never used to train AI models.</p>
+    <p>The assistant's AI model runs entirely on your device. Your conversations are never sent to a server for AI processing and are never used to train AI models. When the assistant searches for places, the search text — and, for searches near you, your location — is sent to Apple Maps, as described under Location.</p>
 
     <h2>Third-Party Services</h2>
     <p>The App uses the following Apple platform services:</p>
     <ul>
-        <li><strong>Apple Maps / MapKit</strong> — For place search and map display. Subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+        <li><strong>Apple Maps / MapKit</strong> — For place search, map display, and looking up the neighborhood and city for your location. Subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
         <li><strong>EventKit</strong> — For calendar integration.</li>
         <li><strong>Apple Intelligence</strong> — For on-device AI processing.</li>
     </ul>
@@ -64,9 +67,9 @@
     <h2>Data Collection Summary</h2>
     <ul>
         <li>DayPlanner has no server. We do not collect data for our own purposes — no analytics, no advertising, and no tracking.</li>
-        <li>We use your precise location to find nearby places. It is sent to Apple Maps to perform the search and is not retained by DayPlanner.</li>
-        <li>We read calendar event titles and times to show your events in the Calendar tab and to check for scheduling conflicts. When you ask the AI assistant about conflicts, this data is processed on-device and may remain in your saved conversation on your device.</li>
-        <li>See "Data Stored on Your Device" above for how itineraries and conversations are stored and how iCloud Backup affects them.</li>
+        <li>If you allow Location access, we use your location to find nearby places and, if you use the assistant, to tell it your neighborhood and city (or just your city). Your location is sent to Apple Maps for these lookups. DayPlanner keeps only the neighborhood and city names, on your device, as part of your conversation history and as the location of any plan the assistant creates for where you are.</li>
+        <li>If you allow Calendar access, we read calendar event titles and times to show your events in the Calendar tab and to check for scheduling conflicts. When the assistant checks for conflicts, this data is processed on-device and may remain in your saved conversation on your device.</li>
+        <li>See "Data Stored on Your Device" above for how itineraries and conversations are stored and how backups affect them.</li>
         <li>We do not share your data with advertisers, data brokers, or analytics providers.</li>
         <li>We do not require an account or login.</li>
     </ul>
